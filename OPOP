@@ -1,0 +1,14 @@
+
+Erreur commençant à la ligne: 1 de la commande -
+CREATE TABLE utilisation (
+    reference NUMBER,
+    ids NUMBER,
+
+    CONSTRAINT fk_reference FOREIGN KEY (reference) REFERENCES MATERIEL(id),
+    CONSTRAINT fk_ids FOREIGN KEY (ids) REFERENCES SERVICE(id)
+)
+Rapport d'erreur -
+ORA-00904: "ID": invalid identifier
+00904. 00000 -  "%s: invalid identifier"
+*Cause:    
+*Action:

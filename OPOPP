@@ -1,0 +1,19 @@
+
+Erreur commençant à la ligne: 1 de la commande -
+CREATE TABLE utilisation (
+    REFERENCE NUMBER,
+    IDS NUMBER,
+
+    CONSTRAINT fk_reference FOREIGN KEY (REFERENCE) REFERENCES MATERIEL(REFERENCE),
+    CONSTRAINT fk_ids FOREIGN KEY (IDS) REFERENCES SERVICE(IDS)
+)
+Rapport d'erreur -
+ORA-02267: column type incompatible with referenced column type
+02267. 00000 -  "column type incompatible with referenced column type"
+*Cause:    The data type or collation of the referencing column was
+           incompatible with the data type or collation of the referenced
+           column.
+*Action:   Select a compatible data type for the referencing column.
+           Also, the collation of a character column in a foreign key must
+           match the collation of the corresponding column in the primary
+           key.
